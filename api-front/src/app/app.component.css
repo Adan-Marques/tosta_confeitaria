@@ -1,0 +1,13 @@
+.bg-color {
+    background-color: #F4B97C;
+}
+.navbar-nav .nav-link {
+    color: #343331;
+    font-weight: bold;
+    font-size: x-large;
+    margin-right: 70px; /* Espaçamento à direita de cada link */
+    margin-left: 70px;
+}
+.header {
+    height: 120px;
+}

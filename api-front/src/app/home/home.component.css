@@ -1,0 +1,36 @@
+.banner {
+    background-image: url(/brownie_banner_3.jpg);
+    background-position: center bottom;
+    height: 328px;
+    width: 1272px;
+    border-radius: 15px;
+    margin-top: -120px;
+}
+
+.teste {
+    background-color: red;
+    margin-left: 17%;
+    margin-right: 17%;
+    height: 40px;
+}
+
+.margem {
+    margin-left: 17%;
+    margin-right: 17%;
+    position: relative;
+}
+
+.logo {
+    background-image: url(/logo_confeitaria_tosta.jpg);
+    background-size: cover;
+    height: 170px;
+    width: 170px;
+    margin-left: 25px;
+    border-radius: 15px;
+    margin-top: -60px;
+}
+
+.titulo {
+    margin-left: 17%;
+    vertical-align: middle;
+}

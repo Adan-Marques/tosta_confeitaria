@@ -29,3 +29,15 @@
     margin-left: 17%;
     /* margin-top: -80px; */
 }
+
+.titulo-left {
+    text-align: left;
+  }
+  
+  .titulo-right {
+    text-align: right;
+  }
+  
+  .titulo-center {
+    text-align: center;
+  }

@@ -1,6 +1,7 @@
 .banner {
     background-image: url(/brownie_banner_3.jpg);
     background-position: center bottom;
+    background-size: cover;
     height: 328px;
     width: 1272px;
     border-radius: 15px;
@@ -12,12 +13,6 @@
     margin-left: 17%;
     margin-right: 17%;
     height: 40px;
-}
-
-.margem {
-    margin-left: 17%;
-    margin-right: 17%;
-    position: relative;
 }
 
 .logo {
@@ -32,5 +27,5 @@
 
 .titulo {
     margin-left: 17%;
-    vertical-align: middle;
+    /* margin-top: -80px; */
 }

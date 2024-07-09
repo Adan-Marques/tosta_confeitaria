@@ -5,8 +5,8 @@
     color: #343331;
     font-weight: bold;
     font-size: x-large;
-    margin-right: 70px; /* Espaçamento à direita de cada link */
-    margin-left: 70px;
+    /* margin-right: 1;
+    margin-left: 1; */
 }
 .header {
     height: 120px;

@@ -1,22 +1,29 @@
 <nav class="navbar navbar-expand-sm py-3 sticky-top bg-color">
-  <div class="container">
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-    data-bs-target="#menuNavbar">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse justify-content-center" id="menuNavbar">
-      <div class="navbar-nav">
-        <a href="" class="nav-link">Início</a>
-        <a href="" class="nav-link">Sobre nós</a>
-        <a href="" class="nav-link text-custom-color">Cadastrar</a>
-        <a href="" class="nav-link text-custom-color">Entrar</a>
-      </div>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+  data-bs-target="#menuNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse justify-content-center" id="menuNavbar">
+    <div class="navbar-nav">
+      <a href="" class="nav-link px-md-5 px-sm-4">Início</a>
+      <a href="" class="nav-link px-md-5 px-sm-4">Sobre nós</a>
+      <a href="" class="nav-link px-md-5 px-sm-4">Cadastrar</a>
+      <a href="" class="nav-link px-md-5 px-sm-4">Entrar</a>
     </div>
   </div>
 </nav>
 <div class="header bg-color"></div>
+<div class="container-fluid">
+  <div class="row"> 
+    <div class="col"></div>
 
-<router-outlet></router-outlet>
+    <div class="col-11 col-md-8">
+      <router-outlet></router-outlet>
+    </div>
+
+    <div class="col"></div>
+  </div>
+</div>
 
 <footer class="p-4 bg-color text-custom-color text-center fixed-bottom py-2">
   Todos os direitos reservados.

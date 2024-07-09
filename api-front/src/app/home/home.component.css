@@ -15,7 +15,7 @@
     height: 40px;
 }
 
-.logo {
+/* .logo {
     background-image: url(/logo_confeitaria_tosta.jpg);
     background-size: cover;
     height: 170px;
@@ -23,9 +23,30 @@
     margin-left: 25px;
     border-radius: 15px;
     margin-top: -60px;
+} */
+
+.logo {
+    height: 170px;
+    width: 170px;
+    margin-left: 50px;
+    margin-top: -60px;
 }
 
 .titulo {
     margin-left: 17%;
     /* margin-top: -80px; */
+}
+
+.pesquisa {
+    border: 0;
+    border-bottom: 2px solid #343331;
+    background-color: #F4F5F7;
+    outline: 0;
+    padding-left: 20px;
+    width: 250px;
+    margin-top: 50px;
+}
+
+.lupa {
+    margin:0px 0px 0px -25px;
 }

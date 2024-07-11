@@ -15,15 +15,7 @@
     height: 40px;
 }
 
-/* .logo {
-    background-image: url(/logo_confeitaria_tosta.jpg);
-    background-size: cover;
-    height: 170px;
-    width: 170px;
-    margin-left: 25px;
-    border-radius: 15px;
-    margin-top: -60px;
-} */
+ 
 
 .logo {
     height: 170px;
@@ -31,6 +23,8 @@
     margin-left: 50px;
     margin-top: -60px;
 }
+
+
 
 .titulo {
     margin-left: 17%;

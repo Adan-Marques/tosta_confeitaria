@@ -27,9 +27,24 @@
     </form>
 </div>
 
-<div class="d-flex">
-    <div class="bg-danger">teste</div>
-    <div class="bg-info">teste</div>
-</div>
 
+<div class="row g-3">
+    <div *ngFor="let item of lista" class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+        <div class="card text-center bg-light">
+            <a href="#">
+                <img src="/bolo.jpg" class="card-img-top img-produto">
+            </a>
+            <div class="card-header">
+                R$ {{item.preco}}
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">{{item.nome}}</h5>
+                <p class="card-text">{{item.descricao}}</p>
+            </div>
+            <div class="card-footer">
+                <button class="btn btn-success mt-2 d-block mx-auto">Comprar</button>
+            </div>
+        </div>
+    </div>
+</div>
 

@@ -1,3 +1,6 @@
+@import "bootstrap-icons/font/bootstrap-icons.css";
+
+
 .banner {
     background-image: url(/brownie_banner_3.jpg);
     background-position: center bottom;
@@ -24,7 +27,15 @@
     margin-top: -60px;
 }
 
+.insta{
+    display: flex;    
+    justify-content: start; /* Alinha horizontalmente no centro */
+    align-items: center; /* Alinha verticalmente no centro */
+    padding-right: 60px;
+    height: 10px;
 
+
+}
 
 .titulo {
     margin-left: 17%;
@@ -49,6 +60,8 @@
     width: 100%;
 }
 
+    
+    
 .lupa {
     position: absolute;
     right: 10px; /* Espaço da borda direita */

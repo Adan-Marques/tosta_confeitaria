@@ -28,7 +28,6 @@
 
 .titulo {
     margin-left: 17%;
-    /* margin-top: -80px; */
 }
 
 .pesquisa {
@@ -36,9 +35,8 @@
     border-bottom: 2px solid #343331;
     background-color: #F4F5F7;
     outline: 0;
-    padding-left: 20px;
+    padding-left: 10px;
     width: 250px;
-    margin-top: 50px;
 }
 
 .lupa {

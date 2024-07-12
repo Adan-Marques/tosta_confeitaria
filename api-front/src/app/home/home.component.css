@@ -36,9 +36,47 @@
     background-color: #F4F5F7;
     outline: 0;
     padding-left: 10px;
-    width: 250px;
+    padding-right: 30px; /* Espaço para a lupa */    
+    max-width: 480px;
+    box-sizing: border-box;
+    height: 30px; /* Ajuste a altura conforme necessário */
+}
+
+.pesquisa-container {
+    position: relative;
+    max-width: 480px;
+    transform: translateY(-50%);
+    width: 100%;
 }
 
 .lupa {
-    margin:0px 0px 0px -25px;
+    position: absolute;
+    right: 10px; /* Espaço da borda direita */
+    top: 20%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    font-size: 1.2em;
+}
+
+@media(max-width: 576px){
+    .form-inline {
+        width: 100%;
+    }
+
+
+    .lupa{
+        margin: 0px 10px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+    .form-inline {
+        width: 50%;
+    }
+}
+
+@media (min-width: 768px) {
+    .form-inline {
+        width: 25%;
+    }
 }

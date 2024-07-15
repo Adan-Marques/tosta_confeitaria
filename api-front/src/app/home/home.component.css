@@ -18,8 +18,6 @@
     height: 40px;
 }
 
- 
-
 .logo {
     height: 170px;
     width: 170px;
@@ -33,8 +31,6 @@
     align-items: center; /* Alinha verticalmente no centro */
     padding-right: 60px;
     height: 10px;
-
-
 }
 
 .titulo {
@@ -60,7 +56,6 @@
     width: 100%;
 }
 
-    
     
 .lupa {
     position: absolute;
@@ -96,4 +91,17 @@
 
 .img-produto {
     height: 150px;
+    border-radius: 15px;
+    width: 95%;
+    margin-top: 2.5%;
+}
+
+.botao {
+    background-color: #F4B97C;
+    border-radius: 15px;
+    color: #343331;
+}
+
+.card {
+    border-radius: 15px;
 }

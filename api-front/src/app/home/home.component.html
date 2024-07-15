@@ -27,19 +27,36 @@
 
 <h2><b>Destaques</b></h2>
 
-<div class="row g-3">
-    <div *ngFor="let item of lista" class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-        <div class="card text-center bg-light h-100">
-            <a href="#">
-                <img src="/brownie_kakarajo.jpg" class="card-img-top img-produto">
-            </a>
-            <div class="card-body">
-                <h5 class="card-title"><b>{{item.nome}}</b></h5>
-                <p class="card-text">{{item.descricao}}</p>
-                <h3><b>R$ {{item.preco}}</b></h3>
-                <button class="btn botao mt-2 d-block mx-auto"><b>Comprar</b></button>
+<div class="row g-4">
+    <div class="col-8">
+        <div class="row">
+            <div *ngFor="let item of lista" class="col-4">
+                <div class="card text-center h-100">
+                    <a href="#">
+                        <img src="/brownie_kakarajo.jpg" class="card-img-top img-produto">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title"><b>{{item.nome}}</b></h5>
+                        <p class="card-text">{{item.descricao}}</p>
+                        <h3><b>R$ {{item.preco}}</b></h3>
+                        <button class="btn botao mt-2 d-block mx-auto"><b>Comprar</b></button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+    <div class="col-4">
+        <div class="row">
+            <div class="col-9 mx-auto">
+                <div class="card border-light mb-3 text-center">
+                    <div class="card-header bg-white">Seu carrinho</div>
+                    <div class="card-body bg-light">
+                        <h1 class="card-title"><i class="bi bi-basket3"></i></h1>
+                        <p class="card-text">Sua sacola está vazia</p>
+                    </div>
+                    <div class="card-footer bg-white"><button class="btn botao mt-2 d-block mx-auto"><b>Finalizar compra</b></button></div>
+                </div>
+            </div>
+        </div>
 </div>
 

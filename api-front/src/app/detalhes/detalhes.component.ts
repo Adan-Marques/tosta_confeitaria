@@ -14,20 +14,30 @@ import { Produto } from '../model/Produto';
 })
 export class DetalhesComponent implements OnInit{
 
-  produto!: Produto;
+  produto!: any;
 
   constructor(private servico: ProdutoService, private route: ActivatedRoute) {
 
   }
 
-    // Método de inicialização
-    ngOnInit(){
-      // this.route.paramMap.subscribe(() => {
-      //   this.selecionar_id();
-      // })
-    }
+  // Método de inicialização
+  ngOnInit(){
+    this.route.paramMap.subscribe(() => {
+      this.selecionar_id();
+    })
+  }
 
-  
+
+  selecionar_id(): void {
+    const id = Number(this.route.snapshot.paramMap.get('id'));
+    const produto = this.servico.getProdutoById(id)
+    console.log(produto)
+    console.log("tipo de produto: " + typeof(produto))
+    this.produto = produto
+    console.log(this.produto)
+    console.log("tipo de this.produto: " + typeof(this.produto))
+  }
+
   // TODO (implementação com backend)
   //     // Método de seleção
   // selecionar_id(): void {

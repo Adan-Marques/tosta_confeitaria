@@ -24,4 +24,8 @@ export class ProdutoService {
   getListProdutos(): Produto[] {
     return this.lista;
   }
+
+  getProdutoById(id: number): Produto | undefined {
+    return this.lista.find(produto => produto.id === id);
+  }
 }

@@ -22,3 +22,12 @@ body {
     margin-top: -60px;
 } 
 
+.botao {
+    background-color: #F4B97C;
+    border-radius: 15px;
+    color: #343331;
+}
+a {
+    text-decoration: none;
+}
+

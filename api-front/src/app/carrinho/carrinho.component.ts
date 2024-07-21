@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { Produto } from '../model/Produto';
+import { Component, OnInit } from '@angular/core';
+import { Item } from '../model/Item';
 
 @Component({
   selector: 'app-carrinho',
@@ -8,15 +8,19 @@ import { Produto } from '../model/Produto';
   templateUrl: './carrinho.component.html',
   styleUrl: './carrinho.component.css'
 })
-export class CarrinhoComponent {
+export class CarrinhoComponent implements OnInit{
 
-  public lista: Produto[] = [];
+  public lista: Item[] = [];
   public mensagem: String = "";
   public totalCarrinho: number = 0;
 
+  ngOnInit(): void {
+    
+  }
+
   constructor(){
     let json = localStorage.getItem("carrinho");
-    if(json==null){
+    if(json == null){
       this.mensagem = "Sua cesta de compras esta vazia!";
     } 
     else {

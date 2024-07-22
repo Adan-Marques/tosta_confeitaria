@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Item } from '../model/Item';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-carrinho',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './carrinho.component.html',
   styleUrl: './carrinho.component.css'
 })
@@ -31,14 +32,14 @@ export class CarrinhoComponent implements OnInit{
     }
   }
 
-  // limpar(){
-  //   this.lista = [];
-  //   localStorage.removeItem("cesta");
-  // }
+  limpar(){
+    this.lista = [];
+    localStorage.removeItem("carrinho");
+  }
 
-  // redirectToVitrine(){
-  //   window.location.href="./vitrine";
-  // }
+  redirectToHome(){
+    window.location.href="./home";
+  }
 
   formatarNumero(numero:number) {
     if (typeof numero !== 'number') {

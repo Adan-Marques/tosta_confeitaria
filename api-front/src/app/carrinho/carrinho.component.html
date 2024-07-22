@@ -1,6 +1,4 @@
-<p>carrinho works!</p>
-
-<!-- <div class="container">
+<div class="container">
     <h1>Cesta de compras</h1>
     <div class="alert alert-warning" *ngIf="mensagem!=''">
         {{mensagem}}
@@ -16,9 +14,9 @@
         </thead>
         <tbody>
             <tr *ngFor="let item of lista">
-                <td>{{item.nomeProduto}}</td>
-                <td>{{item.qtd}}</td>
-                <td>R$ {{ formatarNumero(item.valor) }}</td>
+                <td>{{item.nome}}</td>
+                <td>{{item.quantidade}}</td>
+                <td>R$ {{ formatarNumero(item.preco) }}</td>
                 <td>R$ {{ formatarNumero(item.total) }}</td>
             </tr>
         </tbody>
@@ -27,12 +25,12 @@
                 <th>Total:</th>
                 <th></th>
                 <th></th>
-                <th>R$ {{ formatarNumero(totalCesta) }}</th>
+                <th>R$ {{ formatarNumero(totalCarrinho) }}</th>
             </tr>
         </tfoot>
     </table>
 
     <button class="btn btn-danger" (click)="limpar();">Limpar Cesta</button><br>
-    <button class="btn btn-success mt-3" (click)="redirectToVitrine();">Continuar comprando</button><br>
-    <button class="btn btn-primary mt-3" (click)="redirectToVitrine();">Finalizar compra</button>
-</div> -->
+    <button class="btn btn-success mt-3" (click)="redirectToHome();">Continuar comprando</button><br>
+    <button class="btn btn-primary mt-3">Finalizar compra</button>
+</div>

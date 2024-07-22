@@ -4,6 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from '../home/home.component';
 import { Produto } from '../model/Produto';
+import { Item } from '../model/Item';
 
 @Component({
   selector: 'app-detalhes',
@@ -54,5 +55,27 @@ export class DetalhesComponent implements OnInit{
   //     }
   //   );
   // }
+
+  public comprar(produto: Produto) {
+    let novo: Item = new Item();
+    novo.id = produto.id;
+    novo.nome = produto.nome;
+    novo.preco = produto.preco;
+
+    //TODO: arrumar seleção de quantidade
+    novo.quantidade = 1;
+    novo.total = (produto.preco) * (novo.quantidade);
+    let lista: Item[] = [];
+    let json = localStorage.getItem("carrinho");
+    if (json == null) {
+      lista.push(novo);
+      console.log(JSON.stringify(lista));
+    } else {
+      lista = JSON.parse(json);
+      lista.push(novo);
+    }
+    localStorage.setItem("carrinho", JSON.stringify(lista));
+    window.location.href = "./carrinho";
+  }
 
 }

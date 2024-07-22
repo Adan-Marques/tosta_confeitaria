@@ -40,8 +40,8 @@
                     <div class="card-body">
                         <h5 class="card-title"><b>{{item.nome}}</b></h5>
                         <p class="card-text">{{item.descricao}}</p>
-                        <h3><b>R$ {{item.preco}}</b></h3>
-                        <button class="btn botao mt-2 d-block mx-auto"><b>Comprar</b></button>
+                        <h3><b>R$ {{ formatarNumero(item.preco) }}</b></h3>
+                        <button class="btn botao mt-2 d-block mx-auto" (click)="comprar(item);"><b>Comprar</b></button>
                     </div>
                 </div>
             </div>

@@ -26,6 +26,7 @@ export class HomeComponent {
   }
 
   public produtos = this.produtoService.getListProdutos();
+  public produtosOriginal = this.produtoService.getListProdutos();
 
   formatarNumero(numero:number) {
     if (typeof numero !== 'number') {
@@ -64,4 +65,16 @@ export class HomeComponent {
     window.location.reload();
   }
 
+  buscar(e: Event):void {
+    const target = e.target as HTMLInputElement;
+    const value = target.value.toLowerCase().trim();
+    
+    if (value === '') {
+      this.produtos = this.produtosOriginal;
+    } else {
+      this.produtos = this.produtosOriginal.filter(produto => {
+        return produto.nome?.toLocaleLowerCase().includes(value);
+      });
+    }
+  }
 }

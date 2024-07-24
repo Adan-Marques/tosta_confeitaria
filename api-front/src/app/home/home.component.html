@@ -14,7 +14,7 @@
 
 <div class="d-flex mt-5 justify-content-start pt-5">
     <form class="form-inline pesquisa-container"> 
-        <input class="pesquisa" type="text" placeholder="Digite o que você procura">
+        <input class="pesquisa" type="text" placeholder="Digite o que você procura" (input)="buscar($event)">
         <i class="fa fa-search fa-lg lupa"></i>
     </form>
     <form class="d-flex w-25">

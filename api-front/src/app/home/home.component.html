@@ -32,7 +32,7 @@
 <div class="row">
     <div class="col-8">
         <div class="row">
-            <div *ngFor="let item of lista" class="col-4 mb-4">
+            <div *ngFor="let item of produtos" class="col-4 mb-4">
                 <div class="card text-center h-100">
                     <a href="./detalhes/{{ item.id }}">
                         <img src="/brownie_kakarajo.jpg" class="card-img-top img-produto">
@@ -52,16 +52,42 @@
             <div class="col-9 mx-auto">
                 <div class="card border-light mb-3 text-center">
                     <div class="card-header bg-white">Seu carrinho</div>
+
+
                     <div class="card-body bg-light">
-                        <h1 class="card-title"><i class="bi bi-basket3"></i></h1>
-                        <p class="card-text">Sua sacola está vazia</p>
-                    </div>
-                    <!-- TODO: arrumar isso e substituir essa tag <a> -->
-                    <a href="./carrinho">
-                        <div class="card-footer bg-white">
-                            <button class="btn botao mt-2 d-block mx-auto"><b>Finalizar compra</b></button>
+
+                        <div *ngIf="carrinho_vazio">
+                            <h1 class="card-title"><i class="bi bi-basket3"></i></h1>
+                            <p class="card-text">Sua sacola está vazia</p>
+
+                            <!-- TODO: arrumar isso e substituir essa tag <a> -->
+                            <a href="./carrinho">
+                                <div class="card-footer bg-white">
+                                    <button class="btn botao mt-2 d-block mx-auto"><b>Finalizar compra</b></button>
+                                </div>
+                            </a>
                         </div>
-                    </a>
+
+                        <div *ngIf="!carrinho_vazio">
+                            <tbody>
+                                <tr *ngFor="let item of lista">
+                                    <td>{{item.nome}}</td>
+                                    <td>R$ {{ formatarNumero(item.preco) }}</td>
+                                </tr>
+                            </tbody>
+                            
+                            <!-- TODO: arrumar isso e substituir essa tag <a> -->
+                                <div class="card-footer bg-white">
+                                    <a href="./carrinho">
+                                        <button class="btn botao mt-2 d-block mx-auto"><b>Finalizar compra</b></button>
+                                    </a>
+                                    <button class="btn btn-danger mt-2" (click)="limpar();">Limpar Cesta</button><br>
+                                </div>
+                        </div>
+
+                    </div>
+
+
                 </div>
             </div>
         </div>

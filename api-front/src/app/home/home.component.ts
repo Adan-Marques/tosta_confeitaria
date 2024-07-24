@@ -13,9 +13,19 @@ import { Produto } from '../model/Produto';
 })
 export class HomeComponent {
 
-  constructor(private produtoService: ProdutoService) {}
+  public carrinho_vazio: Boolean = false;
+  public lista: Item[] = [];
 
-  public lista = this.produtoService.getListProdutos();
+  constructor(private produtoService: ProdutoService) {
+    let json = localStorage.getItem("carrinho");
+    if(json == null){
+      this.carrinho_vazio = true;
+    } else {
+      this.lista = JSON.parse(json);
+    }
+  }
+
+  public produtos = this.produtoService.getListProdutos();
 
   formatarNumero(numero:number) {
     if (typeof numero !== 'number') {
@@ -44,7 +54,14 @@ export class HomeComponent {
       lista.push(novo);
     }
     localStorage.setItem("carrinho", JSON.stringify(lista));
-    window.location.href = "./carrinho";
+    window.location.reload();
+    //window.location.href = "./carrinho";
+  }
+
+  limpar(){
+    this.lista = [];
+    localStorage.removeItem("carrinho");
+    window.location.reload();
   }
 
 }

@@ -13,15 +13,20 @@ import { Produto } from '../model/Produto';
 })
 export class HomeComponent {
 
-  public carrinho_vazio: Boolean = false;
+  public carrinho_vazio!: Boolean;
   public lista: Item[] = [];
 
   constructor(private produtoService: ProdutoService) {
+    this.carregarCarrinho();
+  }
+
+  public carregarCarrinho(){
     let json = localStorage.getItem("carrinho");
     if(json == null){
       this.carrinho_vazio = true;
     } else {
       this.lista = JSON.parse(json);
+      this.carrinho_vazio = false;
     }
   }
 
@@ -41,10 +46,10 @@ export class HomeComponent {
     novo.id = produto.id;
     novo.nome = produto.nome;
     novo.preco = produto.preco;
-
     //TODO: arrumar seleção de quantidade
     novo.quantidade = 1;
     novo.total = (produto.preco) * (novo.quantidade);
+
     let lista: Item[] = [];
     let json = localStorage.getItem("carrinho");
     if (json == null) {
@@ -55,14 +60,14 @@ export class HomeComponent {
       lista.push(novo);
     }
     localStorage.setItem("carrinho", JSON.stringify(lista));
-    window.location.reload();
+    this.carregarCarrinho();
     //window.location.href = "./carrinho";
   }
 
   limpar(){
     this.lista = [];
     localStorage.removeItem("carrinho");
-    window.location.reload();
+    this.carregarCarrinho();
   }
 
   buscar(e: Event):void {

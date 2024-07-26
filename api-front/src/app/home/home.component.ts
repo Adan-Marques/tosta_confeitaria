@@ -16,6 +16,9 @@ export class HomeComponent {
   public carrinho_vazio!: Boolean;
   public lista: Item[] = [];
 
+  public produtos = this.produtoService.getListProdutos();
+  public produtosOriginal = this.produtoService.getListProdutos();
+
   constructor(private produtoService: ProdutoService) {
     this.carregarCarrinho();
   }
@@ -30,8 +33,6 @@ export class HomeComponent {
     }
   }
 
-  public produtos = this.produtoService.getListProdutos();
-  public produtosOriginal = this.produtoService.getListProdutos();
 
   formatarNumero(numero:number) {
     if (typeof numero !== 'number') {
@@ -61,7 +62,6 @@ export class HomeComponent {
     }
     localStorage.setItem("carrinho", JSON.stringify(lista));
     this.carregarCarrinho();
-    //window.location.href = "./carrinho";
   }
 
   limpar(){

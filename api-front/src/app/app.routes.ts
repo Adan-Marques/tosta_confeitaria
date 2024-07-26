@@ -4,6 +4,7 @@ import { LoginComponent } from './login/login.component';
 import { CarrinhoComponent } from './carrinho/carrinho.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { DetalhesComponent } from './detalhes/detalhes.component';
+import { FinalizarComponent } from './finalizar/finalizar.component';
 export const routes: Routes = [
 
     {path:"", component:HomeComponent},
@@ -12,4 +13,5 @@ export const routes: Routes = [
     {path:"carrinho", component:CarrinhoComponent},
     {path:"register", component:CadastrarComponent},
     {path:"detalhes/:id", component: DetalhesComponent},
+    {path:"finalizar", component:FinalizarComponent},
 ];

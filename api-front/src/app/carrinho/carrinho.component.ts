@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Item } from '../model/Item';
 import { CommonModule } from '@angular/common';
 
@@ -9,15 +9,12 @@ import { CommonModule } from '@angular/common';
   templateUrl: './carrinho.component.html',
   styleUrl: './carrinho.component.css'
 })
-export class CarrinhoComponent implements OnInit{
+export class CarrinhoComponent{
 
   public lista: Item[] = [];
   public mensagem: String = "";
   public totalCarrinho: number = 0;
 
-  ngOnInit(): void {
-    
-  }
 
   constructor(){
     let json = localStorage.getItem("carrinho");
